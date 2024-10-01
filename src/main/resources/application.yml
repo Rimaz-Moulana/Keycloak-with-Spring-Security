@@ -1,0 +1,19 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/myrealm
+          jwk-set-uri: http://localhost:8080/realms/myrealm/protocol/openid-connect/certs
+keycloak:
+  realm: myrealm
+  auth-server-url: http://localhost:8080/auth/
+  resource: my-resource-server
+  credentials:
+    secret: YOUR_CLIENT_SECRET
+
+
+server:
+  port: 8081
+
+
